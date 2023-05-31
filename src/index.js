@@ -7,7 +7,7 @@ app.use(express.json())
 
 const customers = []
 
-app.get("/account", (request, response) => {
+app.post("/account", (request, response) => {
     const {cpf, name} = request.body;
 
     const customerAlreadyExists = customers.some(
